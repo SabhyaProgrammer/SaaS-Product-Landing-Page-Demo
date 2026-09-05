@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-medium px-6 py-3 rounded-full hover:bg-primary-hover shadow-glow transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-alt text-foreground font-medium px-6 py-3 rounded-full hover:bg-border transition-all duration-300;
+  }
+
+  .btn-ghost {
+    @apply text-foreground font-medium px-4 py-2 rounded-full hover:bg-surface-alt transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-surface rounded-2xl shadow-premium border border-border p-6 transition-all duration-300;
+  }
+}
